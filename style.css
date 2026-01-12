@@ -1,139 +1,239 @@
 /* ============================
-   THEME CONTROL PANEL 
-   (Updated with your Logo Colors)
+   VARIABLES & SETUP
    ============================ */
-:root {
-    /* PRIMARY: Rich Black (Matches the "Auburn Select" bar) */
-    --primary-color: #111111;
-    
-    /* ACCENT: Deep Cardinal Red (Matches the "ASV" text and Star) */
-    --accent-color:  #9e1b32;
-    
-    /* Text Colors */
-    --light-text:    #ffffff;
-    --dark-text:     #333333;
-    --bg-color:      #f9f9f9;
+   :root {
+    --primary: #111111;    /* Rich Black */
+    --accent:  #9e1b32;    /* Deep Cardinal Red */
+    --gray:    #f4f4f4;    /* Light Gray Background */
+    --white:   #ffffff;
+    --text:    #333333;
 }
 
-/* RESET & BASICS */
+/* GLOBAL STYLES */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--dark-text);
+    font-family: 'Montserrat', sans-serif; /* Clean modern font */
+    color: var(--text);
+    background-color: var(--white);
     line-height: 1.6;
 }
 
-/* NAVIGATION BAR */
-nav {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 1rem 0;
-    position: sticky; /* Sticks to top when scrolling */
-    top: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: var(--light-text);
-    text-decoration: none;
-    font-weight: bold;
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif; /* Aggressive sports font */
     text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================
+   TOP BAR (The small strip at the top)
+   ============================ */
+.top-bar {
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-links a {
+    color: var(--white);
+    margin-left: 20px;
+    opacity: 0.8;
+}
+
+.top-links a:hover { opacity: 1; text-decoration: underline; }
+
+/* ============================
+   MAIN NAVIGATION
+   ============================ */
+nav {
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 15px 0;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background: white;
+}
+
+.logo-text {
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-links li { display: inline-block; margin-left: 30px; }
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 600;
     font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
-nav a:hover {
-    color: var(--accent-color);
+.nav-links a:hover { color: var(--accent); }
+
+.nav-btn {
+    background-color: var(--accent);
+    padding: 10px 20px;
+    border-radius: 4px;
 }
 
-/* HERO SECTION (The Big Top Banner) */
+.nav-btn:hover { background-color: white !important; color: var(--accent) !important; }
+
+/* ============================
+   HERO SECTION
+   ============================ */
 .hero {
-    background-color: var(--primary-color);
-    color: var(--light-text);
+    height: 70vh; /* 70% of screen height */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1612872087720-48ca554226bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
-    border-bottom: 5px solid var(--accent-color);
-}
-
-.hero img {
-    max-width: 200px; /* Logo Size */
-    margin-bottom: 20px;
-    border-radius: 50%; /* Perfect Circle */
-    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Glow effect */
-    background-color: white; /* Ensures transparency looks right */
-    border: 4px solid white;
+    color: var(--white);
 }
 
 .hero h1 {
-    margin: 0;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
 
-.tagline {
-    font-size: 1.2rem;
-    color: #cccccc;
-    font-style: italic;
-}
-
-/* SECTIONS (General Layout) */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto; /* Centers the content block */
-}
-
-h2 {
-    color: var(--primary-color);
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--accent-color);
-    display: inline-block;
-    padding-bottom: 10px;
+.hero p {
+    font-size: 1.5rem;
     margin-bottom: 30px;
+    font-weight: 300;
 }
 
-/* TABLES (Schedule) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.cta-btn {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid var(--accent);
 }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.cta-btn:hover {
+    background-color: transparent;
+    border-color: var(--white);
 }
 
-th {
-    background-color: var(--accent-color);
-    color: var(--light-text);
+/* ============================
+   SECTIONS
+   ============================ */
+.section-light { background-color: var(--white); padding: 80px 0; }
+.section-dark { background-color: var(--primary); padding: 80px 0; color: var(--white); }
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-tr:hover {
-    background-color: #f1f1f1;
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
 }
 
-/* ROSTER GRID (Player Cards) */
+.text-white { color: var(--white); }
+
+/* ============================
+   NEWS GRID
+   ============================ */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--gray);
+    border-bottom: 4px solid var(--accent);
+    transition: transform 0.3s;
+}
+
+.news-card:hover { transform: translateY(-5px); }
+
+.news-image { height: 200px; width: 100%; }
+
+.news-text { padding: 25px; }
+
+.news-text .date { font-size: 0.8rem; color: #888; font-weight: bold; }
+
+.news-text h3 { margin: 10px 0; font-size: 1.4rem; }
+
+.read-more { color: var(--accent); font-weight: bold; font-size: 0.9rem; }
+
+/* ============================
+   TABLES
+   ============================ */
+table { width: 100%; border-collapse: collapse; background: var(--white); color: var(--text); }
+th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: var(--accent); color: var(--white); text-transform: uppercase; }
+tr:last-child td { border-bottom: none; }
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status.upcoming { background-color: #e3f2fd; color: #1565c0; }
+
+/* ============================
+   ROSTER CARDS
+   ============================ */
 .roster-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -141,25 +241,58 @@ tr:hover {
 }
 
 .player-card {
-    background: white;
-    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-top: 4px solid var(--primary-color);
-    border-radius: 8px;
 }
 
-.player-number {
-    font-size: 2rem;
+.player-top {
+    background-color: var(--primary);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.jersey-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: var(--white);
     font-weight: bold;
-    color: var(--accent-color);
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--primary-color);
-    color: var(--light-text);
+.player-info { padding: 20px; }
+.player-info h3 { font-size: 1.5rem; margin-bottom: 5px; }
+.player-info p { margin: 0; color: #666; font-size: 0.9rem; }
+
+/* ============================
+   FOOTER
+   ============================ */
+footer { background-color: #000; color: #ccc; padding-top: 60px; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 20px; }
+
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a:hover { color: var(--accent); }
+
+.footer-bottom {
+    background-color: var(--primary);
+    padding: 20px 0;
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+}
+
+/* MOBILE RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Hide menu on small screens for now */
+    .hero h1 { font-size: 2.5rem; }
 }

@@ -3,108 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auburn Select Volleyball</title>
+    <title>Auburn Select Volleyball | Elite Competition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <div class="top-bar">
+        <div class="container">
+            <span>Welcome to the official home of Auburn Select</span>
+            <div class="top-links">
+                <a href="#">Parent Portal</a>
+                <a href="#">Player Login</a>
+            </div>
+        </div>
+    </div>
+
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#roster">Roster</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container nav-flex">
+            <div class="logo-area">
+                <img src="logo.png" alt="ASV Logo">
+                <span class="logo-text">AUBURN SELECT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#schedule">Tournaments</a></li>
+                <li><a href="#roster">The Team</a></li>
+                <li><a href="#contact" class="nav-btn">Join Us</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header id="home" class="hero">
-        <img src="logo.jpg" alt="Team Logo"> 
-        <h1>Auburn Select</h1>
-        <p class="tagline">Excellence. Integrity. Competition.</p>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>ELITE. DISCIPLINE. VICTORY.</h1>
+                <p>The premier competitive volleyball experience in Auburn.</p>
+                <a href="#contact" class="cta-btn">2026 Season Info</a>
+            </div>
+        </div>
     </header>
 
-    <section id="about">
-        <center><h2>About The Club</h2></center>
-        <p>Auburn Select Volleyball is a premier competitive club dedicated to the development of elite student-athletes. Founded on the principles of hard work and technical discipline, we focus on preparing players for the next level of competition.</p>
-        <p>Our philosophy is simple: we train the person, not just the player. Through rigorous practice and high-level tournament play, we build character, leadership, and volleyball IQ.</p>
+    <section id="news" class="section-light">
+        <div class="container">
+            <h2 class="section-title">Club News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image" style="background-color: #333;"></div> <div class="news-text">
+                        <span class="date">Jan 12, 2026</span>
+                        <h3>Season Opener This Weekend</h3>
+                        <p>Auburn Select heads to the Ice Breaker Classic to kick off the 2026 campaign.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image" style="background-color: #444;"></div>
+                    <div class="news-text">
+                        <span class="date">Dec 15, 2025</span>
+                        <h3>New Gear Packages Arrive</h3>
+                        <p>Players can pick up their uniform kits and backpacks at practice this Tuesday.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image" style="background-color: #555;"></div>
+                    <div class="news-text">
+                        <span class="date">Nov 01, 2025</span>
+                        <h3>2026 Roster Finalized</h3>
+                        <p>We are proud to announce the elite athletes representing Auburn Select this year.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
-    <section id="schedule">
-        <center><h2>2026 Tournament Schedule</h2></center>
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Tournament</th>
-                    <th>Location</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jan 14-15</td>
-                    <td>Ice Breaker Classic</td>
-                    <td>Auburn, AL</td>
-                </tr>
-                <tr>
-                    <td>Feb 02-03</td>
-                    <td>Southern Power League #1</td>
-                    <td>Atlanta, GA</td>
-                </tr>
-                <tr>
-                    <td>Feb 20-22</td>
-                    <td>President's Day Cup</td>
-                    <td>St. Louis, MO</td>
-                </tr>
-                <tr>
-                    <td>Mar 10-11</td>
-                    <td>Blue & Orange Invite</td>
-                    <td>Auburn, AL</td>
-                </tr>
-                <tr>
-                    <td>Apr 04-06</td>
-                    <td>Big South Qualifier</td>
-                    <td>Atlanta, GA</td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="schedule" class="section-dark">
+        <div class="container">
+            <h2 class="section-title text-white">2026 Tournaments</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event Name</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan 14-15</td>
+                            <td><strong>Ice Breaker Classic</strong></td>
+                            <td>Auburn, AL</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 02-03</td>
+                            <td><strong>Southern Power League</strong></td>
+                            <td>Atlanta, GA</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 20-22</td>
+                            <td><strong>President's Day Cup</strong></td>
+                            <td>St. Louis, MO</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 10-11</td>
+                            <td><strong>Blue & Orange Invite</strong></td>
+                            <td>Auburn, AL</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
 
-    <section id="roster">
-        <center><h2>2026 Roster</h2></center>
-        <div class="roster-grid">
-            <div class="player-card">
-                <div class="player-number">#04</div>
-                <h3>Sarah J.</h3>
-                <p>Setter / Class of '27</p>
-            </div>
-            
-            <div class="player-card">
-                <div class="player-number">#12</div>
-                <h3>Emily R.</h3>
-                <p>Outside Hitter / Class of '26</p>
-            </div>
-
-            <div class="player-card">
-                <div class="player-number">#08</div>
-                <h3>Mackenzie T.</h3>
-                <p>Libero / Class of '27</p>
-            </div>
-            
-            <div class="player-card">
-                <div class="player-number">#23</div>
-                <h3>Jordan B.</h3>
-                <p>Middle Blocker / Class of '26</p>
+    <section id="roster" class="section-light">
+        <div class="container">
+            <h2 class="section-title">The Squad</h2>
+            <div class="roster-grid">
+                <div class="player-card">
+                    <div class="player-top">
+                        <span class="jersey-num">04</span>
+                    </div>
+                    <div class="player-info">
+                        <h3>Sarah J.</h3>
+                        <p class="position">Setter</p>
+                        <p class="grad-year">Class of '27</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-top">
+                        <span class="jersey-num">12</span>
+                    </div>
+                    <div class="player-info">
+                        <h3>Emily R.</h3>
+                        <p class="position">Outside Hitter</p>
+                        <p class="grad-year">Class of '26</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-top">
+                        <span class="jersey-num">08</span>
+                    </div>
+                    <div class="player-info">
+                        <h3>Mackenzie T.</h3>
+                        <p class="position">Libero</p>
+                        <p class="grad-year">Class of '27</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-top">
+                        <span class="jersey-num">23</span>
+                    </div>
+                    <div class="player-info">
+                        <h3>Jordan B.</h3>
+                        <p class="position">Middle</p>
+                        <p class="grad-year">Class of '26</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <h2>Contact Us</h2>
-        <p>Interested in joining? Questions about the schedule?</p>
-        <p>Email: <strong>info@auburnselect.com</strong></p>
-        <br>
-        <p>&copy; 2026 Auburn Select Volleyball Club</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>About ASV</h4>
+                <p>Auburn Select is dedicated to training elite athletes in a competitive, principled environment.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#schedule">Tournaments</a></li>
+                    <li><a href="#roster">Roster</a></li>
+                    <li><a href="#">Parent Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> info@auburnselect.com</p>
+                <p><strong>Location:</strong> Auburn, AL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Auburn Select Volleyball Club. All Rights Reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
