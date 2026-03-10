@@ -209,13 +209,13 @@ nav {
 .hero-lockup {
     display: inline-flex;
     align-items: center;
-    gap: 20px;
+    gap: 26px;
     margin-bottom: 34px;
 }
 
 .hero-brand-logo {
-    width: 96px;
-    height: 96px;
+    width: 118px;
+    height: 118px;
     border-radius: 50%;
     object-fit: cover;
     background: #fff;
